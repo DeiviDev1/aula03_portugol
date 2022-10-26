@@ -1,31 +1,31 @@
 programa {
 	funcao inicio() {
-		inteiro matriz[3][3], diagPrin[3], diagSec[3], n, p, somap = 0, somas = 0
+		inteiro matriz[3][3], diagP[3], diagS[3], x, y, somap = 0, somas = 0
 		
-		para(n = 0; n < 3; n++){
-		    para(p = 0; p < 3; p++){
-		        escreva("Digite um valor para a posição: [",n,"][",p,"]: ")
-		        leia(matriz[n][p])
+		para(x = 0; x < 3; x++){
+		    para(y = 0; y < 3; y++){
+		        escreva("Digite um valor para a posição: [",x,"][",y,"]: ")
+		        leia(matriz[x][y])
 		        limpa()
-		        se(n==p){
-		            diagPrin[n] = matriz[n][p]
+		        se(x==y){
+		            diagP[x] = matriz[x][y]
 		        }
-		        se((n+p)==2){
-		            diagSec[n] = matriz[n][p]
+		        se((x+y)==2){
+		            diagS[x] = matriz[x][y]
 		        }
 		    }
 		}
 		
 		escreva("Elementos da diagonal principal: ")
-		para(n = 0; n < 3; n++){
-		    escreva(diagPrin[n], " ")
-		    somap = somap + diagPrin[n]
+		para(x = 0; x < 3; x++){
+		    escreva(diagP[x], " ")
+		    somap = somap + diagP[x]
 		}
 		
 		escreva("\nElementos da diagonal secundária:  ")
-		para(n = 0; n < 3; n++){
-		    escreva(diagSec[n]," ")
-		    somas = somas + diagSec[n]
+		para(x = 0; x < 3; x++){
+		    escreva(diagS[x]," ")
+		    somas = somas + diagS[x]
 		}
 		
 		escreva("\nSoma dos elementos da diagonal principal: ", somap)
